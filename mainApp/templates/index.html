@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-image: url({% static 'cool-background1.png' %}); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+    <h1>QR Code Generator</h1>
+    <center><div style="margin-top: 10%; background: rgba( 248, 248, 248, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur(.5px );
+        -webkit-backdrop-filter: blur(.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );; width: 70%; padding: 2%;">
+        <form method="post">
+            {% csrf_token %}
+            <label>Enter the text to be convereted to Barcode<br><br> <input type="text" name="bartext"
+                    placeholder="Enter the Text" style="width: 60%; background: rgba( 74, 74, 74, 0.6 );
+                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                    backdrop-filter: blur( 1px );
+                    -webkit-backdrop-filter: blur( 1px );
+                    border-radius: 10px;
+                    border: 1px solid rgba( 255, 255, 255, 0.18 ); padding: 1%;"></label>
+            <input type="submit" value="Convert" style="background: rgba( 74, 74, 74, 0.6 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 1px );
+            -webkit-backdrop-filter: blur( 1px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 ); padding: 1%;">
+            
+        </form>
+    </div></center>
+</body>
+
+</html>

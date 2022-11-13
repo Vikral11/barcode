@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download from here</title>
+</head>
+
+<body>
+
+    <body style="background-image: url({% static 'cool-background1.png' %}); background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;"> 
+    
+    <center><div style="margin-top: 10%; background: rgba( 248, 248, 248, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur(.5px );
+    -webkit-backdrop-filter: blur(.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );; width: 50%; padding: 2%;">
+
+    
+    <img src="data:image/png;base64,{{x}}" alt="Red dot" />
+    <br>
+    <br>
+        <a href="data:image/png;base64,{{x}}" download style="text-decoration: none; background: rgba(74, 74, 74, 0.932);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.664);
+        backdrop-filter: blur( 1px );
+        -webkit-backdrop-filter: blur( 1px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 ); padding: 1%; color: antiquewhite;">Download</a>
+        
+        <a href="" style="text-decoration: none; background: rgba(74, 74, 74, 0.932);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.664);
+        backdrop-filter: blur( 1px );
+        -webkit-backdrop-filter: blur( 1px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 ); padding: 1%; color: antiquewhite;">Home</a>
+    </div></center>
+    </body>
+
+</html>
